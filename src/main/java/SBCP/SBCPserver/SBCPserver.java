@@ -19,6 +19,11 @@ public class SBCPserver {
       e.printStackTrace();
     }
   }
+  @OnMessage
+  public void onMessage(String message, Session session) {
+    System.out.println("Recibido: " + message);
+  }
+  
   @OnClose
   public void onClose(Session session) {
     // Mostrar un mensaje en la consola cuando se cierra la conexión
